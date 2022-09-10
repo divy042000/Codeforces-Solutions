@@ -1,0 +1,32 @@
+//Link : 
+/* Notes :
+
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+#define int long long int
+#define loop(a,b) for(int i=a;i<b;i++)
+#define loop1(a,b) for(int i=a;i>=b;i--)
+#define mp(a,b) make_pair(a,b)
+#define pb(a) push_back(a)
+ios_base::sync_with_stdio(false); cin.tie(NULL);
+int t,n;
+cin>>t;
+while(t--){
+int n;
+cin>>n;
+int j=n;
+int count=0;
+while((n)>=10)
+{
+    int k=n/10;
+    count=count+k;
+    n=(n-(k*10))+k;
+    
+}
+cout<<j+count<<endl;
+}
+return 0;
+}
