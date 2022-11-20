@@ -1,0 +1,38 @@
+//Link : 
+/* Notes :
+
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+#define int long long int
+#define loop(a,b) for(int i=a;i<b;i++)
+#define loop1(a,b) for(int i=a;i>=b;i--)
+#define mp(a,b) make_pair(a,b)
+#define pb(a) push_back(a)
+ios_base::sync_with_stdio(false); cin.tie(NULL);
+int t,n;
+cin>>t>>n;
+if(t<=n)
+{
+    cout<<(t-1)*1<<endl;
+}
+else
+{
+int requirelitres=t-1;
+int totalprice=n*1;
+int totallitres=n;
+for(auto i=2;i<=t;i++)
+{
+   if(totallitres>=requirelitres)
+   {
+       cout<<totalprice<<endl;
+       break;
+   }
+   totalprice=totalprice+i;
+   totallitres++;
+}    
+}
+return 0;
+}
