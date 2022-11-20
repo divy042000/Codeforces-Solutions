@@ -1,0 +1,38 @@
+//Link : 
+/* Notes :
+
+*/
+#include<bits/stdc++.h>
+using namespace std;
+int main(){
+#define int long long int
+#define loop(a,b) for(int i=a;i<b;i++)
+#define loop1(a,b) for(int i=a;i>=b;i--)
+#define mp(a,b) make_pair(a,b)
+#define pb(a) push_back(a)
+ios_base::sync_with_stdio(false); cin.tie(NULL);
+
+int n;
+cin>>n;
+vector<int> vec;
+int sum=0;
+for(auto i=0;i<n;i++)
+{
+    int k;
+    cin>>k;
+    sum=sum+k;
+    vec.push_back(k);
+}
+int q;
+cin>>q;
+vector<int> queries;
+sort(vec.begin(),vec.end(),greater<int>());
+for(auto i=0;i<q;i++)
+{
+    int a;
+    cin>>a;
+    queries.push_back(a);
+    cout<<sum-vec[queries[i]-1]<<endl;
+}
+return 0;
+}
