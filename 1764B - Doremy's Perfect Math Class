@@ -1,0 +1,35 @@
+//Link : 
+/* Notes :
+
+*/
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+#define int long long int
+#define loop(a,b) for(int i=a;i<b;i++)
+#define loop1(a,b) for(int i=a;i>=b;i--)
+#define mp(a,b) make_pair(a,b)
+#define pb(a) push_back(a)
+ios_base::sync_with_stdio(false); cin.tie(NULL);
+int t,n;
+cin>>t;
+while(t--){
+int n;
+cin>>n;
+vector<int> vec;
+for(auto i=0;i<n;i++)
+{
+    int a;
+    cin>>a;
+    vec.push_back(a);
+}
+int ans=__gcd(vec[0],vec[1]);
+for(auto i=1;i<vec.size();i++)
+{
+    ans=__gcd(ans,vec[i]);
+}
+cout<<vec[vec.size()-1]/ans<<endl;
+}
+return 0;
+}
